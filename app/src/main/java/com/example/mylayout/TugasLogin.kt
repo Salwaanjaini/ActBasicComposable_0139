@@ -82,6 +82,20 @@ fun TugasLogin() {
                 color = Color.Red
             )
 
+            Text(
+                text = "Pascal Pahlepi Pasha",
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Blue
+            )
+
+            Text(
+                text = "20000140001",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black
+            )
+
 
         }
     }
