@@ -31,4 +31,10 @@ fun TugasLogin() {
         id = R.drawable.notasbik
     )
 
-    
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+    ) {
+
+       
