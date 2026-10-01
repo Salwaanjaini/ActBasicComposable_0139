@@ -100,7 +100,14 @@ fun TugasLogin() {
                 modifier = Modifier.height(30.dp)
             )
 
-           
+            Image(
+                painter = gambar,
+                contentDescription = "Foto",
+                modifier = Modifier
+                    .size(280.dp)
+                    .clip(CircleShape),
+                contentScale = ContentScale.Crop
+            )
         }
     }
 }
