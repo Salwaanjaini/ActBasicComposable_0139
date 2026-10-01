@@ -52,7 +52,13 @@ fun TugasLogin() {
                 color = Color.Blue
             )
 
+            Text(
+                text = "Ini adalah halaman login,",
+                fontSize = 16.sp,
+                color = Color.Black
+            )
 
+           
         }
     }
 }
