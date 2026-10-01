@@ -45,6 +45,13 @@ fun TugasLogin() {
             verticalArrangement = Arrangement.Top
         ) {
 
+            Text(
+                text = "Login",
+                fontSize = 32.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Blue
+            )
+
 
         }
     }
