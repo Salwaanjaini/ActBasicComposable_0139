@@ -37,4 +37,15 @@ fun TugasLogin() {
             .background(Color.White)
     ) {
 
-       
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 40.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Top
+        ) {
+
+
+        }
+    }
+}
