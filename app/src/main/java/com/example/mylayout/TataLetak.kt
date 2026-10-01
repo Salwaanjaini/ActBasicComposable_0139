@@ -1,3 +1,5 @@
+package com.example.mylayout
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -21,8 +23,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+
+
 @Composable
-fun TataLetakColumn(modifier: Modifier) {
+fun TataLetakColumn(modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(top = 20.dp, start = 20.dp, end = 20.dp)) {
         Text(text = "Komponen1")
         Text(text = "Komponen2")
@@ -32,7 +36,7 @@ fun TataLetakColumn(modifier: Modifier) {
 }
 
 @Composable
-fun TataLetakRow(modifier: Modifier) {
+fun TataLetakRow(modifier: Modifier = Modifier) {
     Row(modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceEvenly) {
         Text(text = "Komponen1")
@@ -43,7 +47,7 @@ fun TataLetakRow(modifier: Modifier) {
 }
 
 @Composable
-fun TataLetakBox(modifier: Modifier) {
+fun TataLetakBox(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxHeight()
@@ -58,18 +62,22 @@ fun TataLetakBox(modifier: Modifier) {
 }
 
 @Composable
-fun TataLetakColumnRow(modifier: Modifier) {
-    Column() {
+fun TataLetakColumnRow(modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
         //Baris1
-        Row(modifier = modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
             Text(text = "Komponen1Baris1")
             Text(text = "Komponen2Baris1")
             Text(text = "Komponen3Baris1")
         }
         //Baris2
-        Row(modifier = modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
             Text(text = "Komponen1Baris2")
             Text(text = "Komponen2Baris2")
             Text(text = "Komponen3Baris2")
@@ -78,16 +86,19 @@ fun TataLetakColumnRow(modifier: Modifier) {
 }
 
 @Composable
-fun TataLetakRowColumn(modifier: Modifier) {
-    Row(modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
+fun TataLetakRowColumn(modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
         //Kolom1
-        Column() {
+        Column {
             Text(text = "Komponen1Kolom1")
             Text(text = "Komponen2Kolom1")
             Text(text = "Komponen3Kolom1")
         }
         //Kolom2
-        Column() {
+        Column {
             Text(text = "Komponen1Kolom2")
             Text(text = "Komponen2Kolom2")
             Text(text = "Komponen3Kolom2")
@@ -96,14 +107,14 @@ fun TataLetakRowColumn(modifier: Modifier) {
 }
 
 @Composable
-fun TataLetakBoxColumnRow(modifier: Modifier) {
+fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
     val gambar = painterResource(id = R.drawable.notasbik)
-    Column {
+    Column(modifier = modifier) {
         Row(
-            modifier = modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Column() {
+            Column {
                 Row(
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
@@ -112,7 +123,7 @@ fun TataLetakBoxColumnRow(modifier: Modifier) {
                     Text(text = "Col1_Row1_Komponen3")
                 }
                 Row(
-                    modifier = modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
                     Text(text = "Col1_Row2_Komponen1")
@@ -123,7 +134,7 @@ fun TataLetakBoxColumnRow(modifier: Modifier) {
         }
         Spacer(modifier = Modifier.height(height = 10.dp))
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .fillMaxWidth()
                 .height(height = 300.dp)
                 .background(color = Color.Cyan),
